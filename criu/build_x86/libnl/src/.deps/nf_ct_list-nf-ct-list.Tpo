@@ -1,0 +1,410 @@
+src/nf_ct_list-nf-ct-list.o: src/nf-ct-list.c include/netlink/cli/utils.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/stdio.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/cdefs.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/api-level.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/versioning.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/types.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stddef.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/__stddef_max_align_t.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stdint.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/stdint.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/wchar_limits.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/int-ll64.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/bitsperlong.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/bitsperlong.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/posix_types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/stddef.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/compiler_types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/compiler.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/posix_types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/posix_types_64.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/posix_types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/pthread_types.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stdarg.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/seek_constants.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/string.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/xlocale.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/strcasecmp.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/strings.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_strings_inlines.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/stdlib.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/alloca.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/wait.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/wait.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/malloc.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_stdlib_inlines.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/limits.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/limits.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/float.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/limits.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/posix_limits.h \
+  /usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/inttypes.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/inttypes.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/errno.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/errno.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/errno.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/errno.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/errno-base.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_errno_inlines.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/ctype.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/getopt.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/getopt.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/socket.h \
+  include/linux-private/linux/socket.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/fcntl.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/fcntl.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/socket.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/socket.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/sockios.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/sockios.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/sockios.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/uio.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/sa_family_t.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/select.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/time.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/signal.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/sigcontext.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/signal_types.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/signal.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/signal.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/signal-defs.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/siginfo.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/siginfo.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/timespec.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/ucontext.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/user.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_signal_inlines.h \
+  include/netlink/netlink.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/poll.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/poll.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/poll.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/poll.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/time.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/time.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/netdb.h \
+  include/netlink/netlink-compat.h include/linux-private/linux/netlink.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/kernel.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/sysinfo.h \
+  include/linux-private/linux/rtnetlink.h \
+  include/linux-private/linux/if_link.h \
+  include/linux-private/linux/if_addr.h \
+  include/linux-private/linux/neighbour.h \
+  include/linux-private/linux/genetlink.h \
+  include/linux-private/linux/netfilter/nfnetlink.h \
+  include/linux-private/linux/netfilter/nfnetlink_compat.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/netinet/tcp.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/tcp.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/byteorder.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/byteorder/little_endian.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/swab.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/swab.h \
+  include/netlink/version.h include/netlink/errno.h \
+  include/netlink/types.h include/netlink/handlers.h \
+  include/netlink/netlink-kernel.h include/netlink/socket.h \
+  include/netlink/object.h include/netlink/utils.h \
+  include/netlink/list.h include/netlink/addr.h \
+  include/netlink/route/rtnl.h include/netlink/route/link.h \
+  include/netlink/cache.h include/netlink/msg.h include/netlink/attr.h \
+  include/netlink/data.h include/netlink/route/addr.h \
+  include/netlink/route/neighbour.h include/netlink/route/neightbl.h \
+  include/netlink/route/route.h include/netlink/route/nexthop.h \
+  /usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/in_route.h \
+  include/netlink/route/rule.h include/linux-private/linux/fib_rules.h \
+  include/netlink/route/qdisc.h include/netlink/route/tc.h \
+  include/linux-private/linux/pkt_sched.h \
+  include/linux-private/linux/pkt_cls.h include/netlink/route/class.h \
+  include/netlink/route/classifier.h include/netlink/route/cls/ematch.h \
+  include/netlink/fib_lookup/lookup.h \
+  include/netlink/fib_lookup/request.h include/netlink/genl/genl.h \
+  include/netlink/genl/ctrl.h include/netlink/genl/mngt.h \
+  include/netlink/netfilter/ct.h include/netlink/cli/ct.h \
+  include/linux-private/linux/netfilter/nf_conntrack_common.h
+
+include/netlink/cli/utils.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/stdio.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/cdefs.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/api-level.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/versioning.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/types.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stddef.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/__stddef_max_align_t.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stdint.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/stdint.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/wchar_limits.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/int-ll64.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/bitsperlong.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/bitsperlong.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/posix_types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/stddef.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/compiler_types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/compiler.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/posix_types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/posix_types_64.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/posix_types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/pthread_types.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/stdarg.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/seek_constants.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/string.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/xlocale.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/strcasecmp.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/strings.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_strings_inlines.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/stdlib.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/alloca.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/wait.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/wait.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/malloc.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_stdlib_inlines.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/limits.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/limits.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/float.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/limits.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/posix_limits.h:
+
+/usr/x86_64-linux-android-4.9/lib64/clang/7.0.2/include/inttypes.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/inttypes.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/errno.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/errno.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/errno.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/errno.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/errno-base.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_errno_inlines.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/ctype.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/getopt.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/getopt.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/socket.h:
+
+include/linux-private/linux/socket.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/fcntl.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/fcntl.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/socket.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/socket.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/sockios.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/sockios.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/sockios.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/uio.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/sa_family_t.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/select.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/time.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/signal.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/sigcontext.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/signal_types.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/signal.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/signal.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/signal-defs.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/siginfo.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/siginfo.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/bits/timespec.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/ucontext.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/user.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/android/legacy_signal_inlines.h:
+
+include/netlink/netlink.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/poll.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/poll.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/poll.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm-generic/poll.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/time.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/sys/time.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/netdb.h:
+
+include/netlink/netlink-compat.h:
+
+include/linux-private/linux/netlink.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/kernel.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/sysinfo.h:
+
+include/linux-private/linux/rtnetlink.h:
+
+include/linux-private/linux/if_link.h:
+
+include/linux-private/linux/if_addr.h:
+
+include/linux-private/linux/neighbour.h:
+
+include/linux-private/linux/genetlink.h:
+
+include/linux-private/linux/netfilter/nfnetlink.h:
+
+include/linux-private/linux/netfilter/nfnetlink_compat.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/netinet/tcp.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/tcp.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/byteorder.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/byteorder/little_endian.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/swab.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/asm/swab.h:
+
+include/netlink/version.h:
+
+include/netlink/errno.h:
+
+include/netlink/types.h:
+
+include/netlink/handlers.h:
+
+include/netlink/netlink-kernel.h:
+
+include/netlink/socket.h:
+
+include/netlink/object.h:
+
+include/netlink/utils.h:
+
+include/netlink/list.h:
+
+include/netlink/addr.h:
+
+include/netlink/route/rtnl.h:
+
+include/netlink/route/link.h:
+
+include/netlink/cache.h:
+
+include/netlink/msg.h:
+
+include/netlink/attr.h:
+
+include/netlink/data.h:
+
+include/netlink/route/addr.h:
+
+include/netlink/route/neighbour.h:
+
+include/netlink/route/neightbl.h:
+
+include/netlink/route/route.h:
+
+include/netlink/route/nexthop.h:
+
+/usr/x86_64-linux-android-4.9/sysroot/usr/include/linux/in_route.h:
+
+include/netlink/route/rule.h:
+
+include/linux-private/linux/fib_rules.h:
+
+include/netlink/route/qdisc.h:
+
+include/netlink/route/tc.h:
+
+include/linux-private/linux/pkt_sched.h:
+
+include/linux-private/linux/pkt_cls.h:
+
+include/netlink/route/class.h:
+
+include/netlink/route/classifier.h:
+
+include/netlink/route/cls/ematch.h:
+
+include/netlink/fib_lookup/lookup.h:
+
+include/netlink/fib_lookup/request.h:
+
+include/netlink/genl/genl.h:
+
+include/netlink/genl/ctrl.h:
+
+include/netlink/genl/mngt.h:
+
+include/netlink/netfilter/ct.h:
+
+include/netlink/cli/ct.h:
+
+include/linux-private/linux/netfilter/nf_conntrack_common.h:

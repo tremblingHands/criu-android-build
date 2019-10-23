@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ROOT=`pwd`
+X86_ROOT=$ROOT/intel
+LIBNET_URL="https://github.com/sam-github/libnet/archive/libnet-1.2.tar.gz"
+LIBNET_DIR="libnet"
+
+if [[ ! -d $LIBNET_DIR ]]; then
+    printf "\n[*]Downloading $LIBNET_DIR\n\n"
+    curl -L $LIBNET_URL > $LIBNET_DIR.tar.gz
+    mkdir $LIBNET_DIR
+    tar --strip=1 -xzvf $LIBNET_DIR.tar.gz -C $LIBNET_DIR 1>/dev/null
+    cd $ROOT/$LIBNET_DIR/$LIBNET_DIR
+    ./autogen.sh
+    ./configure --prefix=$X86_ROOT
+    printf "\n[*]Compiling $LIBNET_DIR\n\n"
+    make -j$(nproc)
+    printf "\n[*]Installing $LIBNET_DIR\n\n"
+    make install
+fi
