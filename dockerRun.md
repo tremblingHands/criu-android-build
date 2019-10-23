@@ -44,8 +44,13 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 
 ### NDK
 
-$NDK/build/tools/make-standalone-toolchain.sh --install-dir=/usr/x86_64-linux-android-4.9  --arch=x86_64 --platform=android-24
+//$NDK/build/tools/make-standalone-toolchain.sh --install-dir=/usr/x86_64-linux-android-4.9  --arch=x86_64 --platform=android-24
 export PATH=$PATH:/usr/x86_64-linux-android-4.9/bin
+
+
+$NDK/build/tools/make-standalone-toolchain.sh --install-dir=/usr/x86_64-linux-android-4.9  --arch=x86_64 --platform=android-26
+export PATH=$PATH:/usr/x86_64-linux-android-4.9/bin
+
 
 ### runc
 
@@ -54,5 +59,27 @@ CC=x86_64-linux-android-gcc  CXX=x86_64-linux-android-g++  GOOS=android GOARCH=a
 ## x86 criu
 
 docker run --privileged -v ~/zxh/criu/criu-android-build/criu/build_x86:/build -it criu-android bash
+apt install zip
 
+
+wget https://github.com/google/protobuf/archive/v3.1.0.tar.gz
+mkdir protobuf
+tar --strip=1 -xzvf protobuf.v3.1.0.tar.gz -C protobuf  1>/dev/null
+
+wget https://github.com/protobuf-c/protobuf-c/archive/v1.3.0.tar.gz
+mkdir protobuf-c
+tar --strip=1 -xzvf protobuf-c.v1.3.0.tar.gz -C protobuf-c  1>/dev/null
+
+wget https://github.com/libnet/libnet/releases/download/v1.2/libnet-1.2.tar.gz
+mkdir libnet
+tar --strip=1 -xzvf libnet-1.2.tar.gz -C libnet 1>/dev/null
+
+//wget https://github.com/thom311/libnl/archive/libnl3_5_0.tar.gz
+wget https://www.infradead.org/~tgr/libnl/files/libnl-3.2.25.tar.gz
+mkdir libnl
+tar --strip=1 -xzvf libnl-3.2.25.tar.gz -C libnl 1>/dev/null
+
+wget tar --strip=1 -xzvf libnl-3.5.0.tar.gz -C libnl 1>/dev/null
+mkdir criu
+tar --strip=1 -xzvf v3.13.tar.gz -C criu 1>/dev/null
 
