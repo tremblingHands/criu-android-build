@@ -505,7 +505,9 @@ static int check_ipc(void)
 {
 	int ret;
 
-	ret = access("/proc/sys/kernel/sem_next_id", R_OK | W_OK);
+	// omni omit sem check
+	ret = 0;
+	//ret = access("/proc/sys/kernel/sem_next_id", R_OK | W_OK);
 	if (!ret)
 		return 0;
 

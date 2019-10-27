@@ -427,9 +427,16 @@ static int dump_ipc_var(struct cr_img *img)
 		goto err;
 	var.has_mq_msg_default = true;
 	var.has_mq_msgsize_default = true;
+	// omni android has no sem_next_id
+	/**
 	var.has_msg_next_id = true;
 	var.has_sem_next_id = true;
 	var.has_shm_next_id = true;
+	**/
+	var.has_msg_next_id = false;
+	var.has_sem_next_id = false;
+	var.has_shm_next_id = false;
+
 
 	ret = ipc_sysctl_req(&var, CTL_READ);
 	if (ret < 0) {
