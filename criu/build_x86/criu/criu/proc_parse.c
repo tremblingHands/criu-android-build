@@ -1324,7 +1324,7 @@ replace:
 	}
 	path[len - off] = 0;
 }
-
+/**
 static int parse_mountinfo_ent(char *str, struct mount_info *new, char **fsname)
 {
 	struct fd_link root_link;
@@ -1333,16 +1333,85 @@ static int parse_mountinfo_ent(char *str, struct mount_info *new, char **fsname)
 	char *sub, *opt = NULL;
 
 	new->mountpoint = xmalloc(PATH_MAX);
-	if (new->mountpoint == NULL)
+	if (new->mountpoint == NULL){
+		// omni
+		pr_err("Error xmalloc\n");
 		goto err;
+	}
 
 	new->mountpoint[0] = '.';
+	// omni
+	pr_err("omni str = %s\n", str);
+
 	ret = sscanf(str, "%i %i %u:%u %ms %s %ms %n",
 			&new->mnt_id, &new->parent_mnt_id,
 			&kmaj, &kmin, &new->root, new->mountpoint + 1,
 			&opt, &n);
-	if (ret != 7)
+	
+	if (ret != 7){
+		// omni
+		pr_err("%i %i %u:%u %s %s %s %d\n", new->mnt_id, new->parent_mnt_id, kmaj, kmin, new->root, new->mountpoint, opt, n);
+		pr_err("Error ret = %d\n", ret);
 		goto err;
+	}
+**/
+static int parse_mountinfo_ent(char *str, struct mount_info *new, char **fsname)
+{
+        struct fd_link root_link;
+        unsigned int kmaj, kmin;
+        int ret, n;
+        char *sub, *opt = NULL;
+        char *token = NULL;
+        char str_bk[PATH_MAX];
+        char *res[10];
+	int omni_debug = 0;
+        new->mountpoint = xmalloc(PATH_MAX);
+        new->root = xmalloc(PATH_MAX);
+        opt = xmalloc(PATH_MAX);
+        if (new->mountpoint == NULL)
+                goto err;
+
+        new->mountpoint[0] = '.';
+        /*
+        ret = sscanf(str, "%i %i %u:%u %ms %s %ms %n",
+                        &new->mnt_id, &new->parent_mnt_id,
+                        &kmaj, &kmin, &new->root, new->mountpoint + 1,
+                        &opt, &n);
+        */
+        // omni
+	if(omni_debug == 1)
+        	pr_err("omni ori_str = %s\n", str);
+        ret = 0, n = 0;
+        strcpy(str_bk, str);
+        token = strtok(str_bk, " ");
+        while (token != NULL && ret < 10)
+        {
+                res[ret] = token;
+                ret = ret + 1;
+                token = strtok(NULL, " ");
+        }
+        sscanf(res[0], "%i", &new->mnt_id);
+        n += strlen(res[0]);
+        sscanf(res[1], "%i", &new->parent_mnt_id);
+        n += strlen(res[1]);
+        sscanf(res[2], "%u:%u", &kmaj, &kmin);
+        n += strlen(res[2]);
+        sscanf(res[3], "%s", new->root);
+        n += strlen(res[3]);
+        sscanf(res[4], "%s", new->mountpoint + 1);
+        n += strlen(res[4]);
+        sscanf(res[5], "%s", opt);
+        n += strlen(res[5]);
+        n += 6;
+        if(omni_debug == 1)
+                pr_err("omni str = %s, ret = %d\n", str, ret);
+        if(omni_debug == 1)
+                pr_err("%i %i %u:%u %s %s %s %d\n", new->mnt_id, new->parent_mnt_id, kmaj, kmin, new->root, new->mountpoint, opt, n);
+
+
+        if (ret != 10)
+                goto err;
+
 
 	cure_path(new->mountpoint);
 	cure_path(new->root);
@@ -1355,39 +1424,83 @@ static int parse_mountinfo_ent(char *str, struct mount_info *new, char **fsname)
 	}
 
 	new->mountpoint = xrealloc(new->mountpoint, strlen(new->mountpoint) + 1);
-	if (!new->mountpoint)
+	if (!new->mountpoint){
+		//omni
+		pr_err("Error xrealloc\n");
 		goto err;
+	}
 	new->ns_mountpoint = new->mountpoint;
 	new->is_ns_root = is_root(new->ns_mountpoint + 1);
 
 	new->s_dev = new->s_dev_rt = MKKDEV(kmaj, kmin);
 	new->flags = 0;
-	if (parse_mnt_flags(opt, &new->flags))
+	if (parse_mnt_flags(opt, &new->flags)){
+		//omni
+		pr_err("Error parse_mnt_flags\n");
 		goto err;
+	}
 
 	free(opt); /* we are going to reallocate/reuse this buffer */
 	opt = NULL;
 
 	str += n;
-	if (parse_mnt_opt(str, new, &n))
+	if (parse_mnt_opt(str, new, &n)){
+		// omni
+		pr_err("Error parse_mnt_opt\n");
 		goto err;
-
+	}
 	str += n;
+/**
 	ret = sscanf(str, "%ms %ms %ms", fsname, &new->source, &opt);
+**/
+	// omni
+	new->source = xmalloc(PATH_MAX);
+	*fsname = xmalloc(PATH_MAX);
+	opt = xmalloc(PATH_MAX);
+	strcpy(str_bk, str);
+	token = strtok(str_bk, " ");
+	ret = 0;
+	while (token != NULL && ret < 3)
+        {       
+                res[ret] = token;
+                ret = ret + 1;
+                token = strtok(NULL, " ");
+        }
+	sscanf(res[0], "%s", *fsname);
+	sscanf(res[1], "%s", new->source);
+	if(ret == 3){
+		sscanf(res[2], "%s", opt);
+	}
+	if(omni_debug == 1){
+                pr_err("omni str = %s\n", str);
+		pr_err("omni fsname = %s\n", *fsname);
+		pr_err("omni source = %s\n", new->source);
+		pr_err("omni opt = %s\n", opt);
+	}
+
 	if (ret == 2) {
 		/* src may be empty */
 		opt = new->source;
 		new->source = xstrdup("");
-		if (new->source == NULL)
+		if (new->source == NULL){
+			// omni
+			pr_err("Error new->source == NULL\n");
 			goto err;
-	} else if (ret != 3)
+		}
+	} else if (ret != 3){
+		// omni
+		pr_err("Error ret = %d\n", ret);
 		goto err;
+	}
 
 	cure_path(new->source);
 
 	new->fsname = xstrdup(*fsname);
-	if (!new->fsname)
+	if (!new->fsname){
+		// omni
+		pr_err("Error !new->fsname\n");
 		goto err;
+	}
 
 	/*
 	 * The kernel reports "subtypes" sometimes and the valid
@@ -1401,11 +1514,17 @@ static int parse_mountinfo_ent(char *str, struct mount_info *new, char **fsname)
 	new->fstype = find_fstype_by_name(*fsname);
 
 	new->options = xmalloc(strlen(opt) + 1);
-	if (!new->options)
+	if (!new->options){
+		// omni
+		pr_err("Error !new->options\n");
 		goto err;
+	}
 
-	if (parse_sb_opt(opt, &new->sb_flags, new->options))
+	if (parse_sb_opt(opt, &new->sb_flags, new->options)){
+		// omni
+		pr_err("Error parse_sb_opt\n");
 		goto err;
+	}
 
 	ret = 0;
 ret:
