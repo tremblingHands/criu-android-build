@@ -300,7 +300,7 @@ static int ghost_apply_metadata(const char *path, GhostFileEntry *gfe)
 		tv[0].tv_usec = gfe->atim->tv_usec;
 		tv[1].tv_sec = gfe->mtim->tv_sec;
 		tv[1].tv_usec = gfe->mtim->tv_usec;
-		if (lutimes(path, tv)) {
+		if (utimes(path, tv)) {
 			pr_perror("Can't set access and modification times on ghost %s", path);
 			goto err;
 		}
