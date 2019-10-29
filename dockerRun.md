@@ -18,6 +18,7 @@ make ARCH=arm SUBARCH=arm  CROSS_COMPILE=arm-eabi-
 
 ## x86 android
 
+repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-8.0.0_r16
 
 apt-get install -y openjdk-8-jdk
 
@@ -34,10 +35,18 @@ apt-get install -y lib32ncurses5-dev x11proto-core-dev libx11-dev
 apt-get install -y libgl1-mesa-dev libxml2-utils xsltproc unzip m4
 apt-get install -y lib32z-dev ccache
 
+export USER=$(whoami)
 ./prebuilts/sdk/tools/jack-admin start-server
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
 ./prebuilts/sdk/tools/jack-admin kill-server
 ./prebuilts/sdk/tools/jack-admin start-server
+
+
+### kernel
+
+make ARCH=x86  x86_64_ranchu_defconfig
+make menuconfig
+make ARCH=x86_64 CROSS_COMPILE=x86_64-linux-android-
 
 
 ## x86 runc
