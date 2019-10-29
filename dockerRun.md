@@ -1,4 +1,6 @@
 
+ emulator -kernel ../kernel-4.9/arch/x86/boot/bzImage  -partition-size 10240 -no-window
+
  docker pull jokenzhang/criu:ndk_x86_64_build
 
 ## arm kernel
