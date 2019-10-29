@@ -1,4 +1,6 @@
 
+ docker pull jokenzhang/criu:ndk_x86_64_build
+
 ## arm kernel
 
 docker run --privileged -v /root/zxh/criu/criu-android-build/kernel:/root  -it jokenzhang/public:debian bash
